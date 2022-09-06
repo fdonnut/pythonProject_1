@@ -27,7 +27,47 @@ import simple_draw as sd
 # sd.line()
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
-# TODO здесь ваш код
+
+def triangle(point, angle=0, length=200):
+    for a in range(angle, 360, 120):
+        v = sd.get_vector(start_point=point, angle=a, length=length, width=3)
+        v.draw()
+        point = v.end_point
+
+
+def square(point, angle=0, length=200):
+    for a in range(angle, 360, 90):
+        v = sd.get_vector(start_point=point, angle=a, length=length, width=3)
+        v.draw()
+        point = v.end_point
+
+
+def penta(point, angle=0, length=200):
+    for a in range(angle, 360, 72):
+        v = sd.get_vector(start_point=point, angle=a, length=length, width=3)
+        v.draw()
+        point = v.end_point
+
+
+def sexta(point, angle=0, length=200):
+    for a in range(angle, 360, 60):
+        v = sd.get_vector(start_point=point, angle=a, length=length, width=3)
+        v.draw()
+        point = v.end_point
+
+
+point_0 = sd.get_point(100, 400)
+triangle(point=point_0, angle=30, length=100)
+
+point_0 = sd.get_point(400, 400)
+square(point=point_0, angle=30, length=100)
+
+point_0 = sd.get_point(150, 100)
+penta(point=point_0, angle=30, length=100)
+
+point_0 = sd.get_point(400, 100)
+sexta(point=point_0, angle=10, length=90)
+
 
 # Часть 1-бис.
 # Попробуйте прикинуть обьем работы, если нужно будет внести изменения в этот код.

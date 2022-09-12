@@ -15,3 +15,13 @@
 
 # Можно распространять библиотеки кода Python в том виде,
 # из которого трудно восстановить исходный код.
+from dis import dis
+
+
+def some_func(param):
+    a = 23
+    print(a, param)
+    return a
+
+
+dis(some_func)

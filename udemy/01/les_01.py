@@ -194,4 +194,61 @@ print(list(range(1, 6)))
 my_string = 'abcdefg'
 for item in enumerate(my_string):
     print(item)
+# list comprehension
+word = 'comprehension'
+# list_1 = []
+# for letter in word:
+#     list_1.append(letter)
+# print(list_1)
+# =>
+list_1 = [letter for letter in word]
+print(list_1)
+list_num = [number * 2 for number in range(10) if number % 2 == 0]
+print(list_num)
+list_num_1 = [3, 4, -2, 5, -8, 0, 2, -6, 9, -1]
+new_list = ['+' if number > 0 else '-' if number < 0 else 'zero' for number in list_num_1]
+print(new_list)
+# dict comprehension
+number_dict = {'first': 1, 'second': 2, 'third': 3}
+new_dict = {key: value ** 2 for key, value in number_dict.items()}
+print(new_dict)
+new_dict_1 = {number: number ** 2 for number in list_num_1}
+print(new_dict_1)
+new_dict_2 = {number: 'pos' if number > 0 else 'neg' if number < 0 else 'zero' for number in list_num_1}
+print(new_dict_2)
+# set comprehension
+new_set = {number ** 2 for number in list_num_1}
+print(new_set)
+letter_set = {letter.upper() for letter in word}
+print(letter_set)
+# task
+smile = '\U0001f600'
+for i in range(10):
+    # count = 0
+    emoticons = ''
+    for count in range(i + 1):
+    # while count <= i:
+        emoticons += smile
+        # count += 1
+    print(emoticons)
 
+for i in range(1, 11):
+    print(smile * i)
+
+count = 1
+while count < 11:
+    print(smile * count)
+    count += 1
+
+# task
+list_2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(list_2[1])
+print(list_2[2][1])
+print(list_2[-1][-1])
+for item in list_2:
+    print(item)
+for item in list_2:
+    for i in item:
+        print(i)
+# =>
+[[print(num) for num in item] for item in list_2]

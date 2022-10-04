@@ -16,3 +16,7 @@ print('"4 из 20", выиграют номера:', get_random_numbers(4, 20), 
 print('"6 из 45", выиграют номера:', get_random_numbers(6, 45))
 print('"5 из 36", выиграют номера:', get_random_numbers(5, 36), get_random_numbers(1, 4))
 print('"Большое Спортлото", выиграют номера:', get_random_numbers(5, 50), get_random_numbers(2, 10))
+
+for _ in range(23):
+    lucky = get_random_numbers(6, 45)
+print(lucky)
